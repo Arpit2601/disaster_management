@@ -10,6 +10,7 @@ class Goods(ModelForm):
 
 
 class RawGoodsForm(forms.Form):
+    # all data fields in goods form, will be used later
     Name = forms.CharField(widget=forms.TextInput(attrs={"placeholder": "your/organisations name here",}))
     Phone_Number = forms.CharField()
     Email = forms.EmailField()
@@ -20,6 +21,7 @@ class RawGoodsForm(forms.Form):
         }
     )
     )
+    # taking amount of water from customers
     Water = forms.IntegerField(widget=forms.NumberInput)
     Packets_of_FoodItems = forms.IntegerField(widget=forms.NumberInput)
     Medicines = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "enter the name, use and quantity of each medicine",}))
